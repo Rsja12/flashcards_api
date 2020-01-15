@@ -15,7 +15,7 @@ class TopicsController < ApplicationController
     end
 
     def create
-        topic = topic.new(topic_params)
+        topic = Topic.new(topic_params)
         if topic.save
             render json: topic
         else
