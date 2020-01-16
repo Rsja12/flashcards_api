@@ -2,7 +2,7 @@ class TopicsController < ApplicationController
 
     def index
         topics = Topic.all
-        render json: topics
+        render json: topics.to_json(:include => {:flashcards => {:only => [:name, :description]}})
     end
 
     def show
