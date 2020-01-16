@@ -8,7 +8,7 @@ class TopicsController < ApplicationController
     def show
         topic = Topic.find_by(id: params[:id])
         if topic
-            render json: topic
+            render json: topic.to_json(:include => {:flashcards => {:only => [:name, :description]}})
         else
             render json: { message: 'Topic not found' }
         end
