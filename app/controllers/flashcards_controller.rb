@@ -20,7 +20,7 @@ class FlashcardsController < ApplicationController
         topic = Topic.find_by(id: params[:topic_id])
         flashcard = topic.flashcards.build(flashcard_params)
         if flashcard.save
-            render json: topic.to_json(:include => {:flashcards => {:only => [:name, :description, :topic_id]}})
+            render json: flashcard
         else
             render json: { message: 'Flashcard not created' }
         end
