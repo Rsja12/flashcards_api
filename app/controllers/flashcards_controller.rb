@@ -1,7 +1,8 @@
 class FlashcardsController < ApplicationController
 
     def index
-        flashcards = Flashcard.all
+        topic = Topic.find_by(id: params[:topic_id])
+        flashcards = topic.flashcards 
         render json: flashcards
     end
 
@@ -15,9 +16,11 @@ class FlashcardsController < ApplicationController
     end
 
     def create
-        flashcard = flashcard.new(flashcard_params)
+        # byebug
+        topic = Topic.find_by(id: params[:topic_id])
+        flashcard = topic.flashcards.build(flashcard_params)
         if flashcard.save
-            render json: flashcard
+            render json: topic.to_json(:include => {:flashcards => {:only => [:name, :description, :topic_id]}})
         else
             render json: { message: 'Flashcard not created' }
         end

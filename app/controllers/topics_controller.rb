@@ -2,13 +2,13 @@ class TopicsController < ApplicationController
 
     def index
         topics = Topic.all
-        render json: topics.to_json(:include => {:flashcards => {:only => [:name, :description]}})
+        render json: topics.to_json(:include => {:flashcards => {:only => [:name, :description, :topic_id]}})
     end
 
     def show
         topic = Topic.find_by(id: params[:id])
         if topic
-            render json: topic.to_json(:include => {:flashcards => {:only => [:name, :description]}})
+            render json: topic.to_json(:include => {:flashcards => {:only => [:name, :description, :topic_id]}})
         else
             render json: { message: 'Topic not found' }
         end
