@@ -34,6 +34,12 @@ class FlashcardsController < ApplicationController
         render json: flashcard
     end
 
+    def destroy
+        # byebug
+        flashcard = Flashcard.find_by(id: params[:id])
+        flashcard.destroy
+    end
+
 
     private
 
