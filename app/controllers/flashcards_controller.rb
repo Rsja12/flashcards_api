@@ -27,7 +27,8 @@ class FlashcardsController < ApplicationController
     end
 
     def update
-        flashcard = Topic.find_by(id: params[:id])
+        # byebug
+        flashcard = Flashcard.find_by(id: params[:id])
         flashcard.update(flashcard_params)
         
         render json: flashcard
