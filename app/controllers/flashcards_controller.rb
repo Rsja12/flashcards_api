@@ -37,7 +37,7 @@ class FlashcardsController < ApplicationController
     def destroy
         # byebug
         flashcard = Flashcard.find_by(id: params[:id])
-        flashcard.destroy
+        flashcard.destroy  
     end
 
 
