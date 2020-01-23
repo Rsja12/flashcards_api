@@ -1,24 +1,11 @@
-# README
+#FlashCard App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a simple flashcard application where users can create categories and then create flashcards that belong to those categories.
 
-Things you may want to cover:
+#Get Started
 
-* Ruby version
+This is only the backend side of this project. The frontend can be found at https://github.com/Rsja12/flashcards_client. Clone down both this repo and the frontend repo down to your machine. Make sure to run `bundle install` and start a rails server with `rails s`. After doing both of these steps, follow along the readme for the frontend.
 
-* System dependencies
+#License
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This project is licensed under the MIT License
