@@ -11,4 +11,3 @@ Topic.create([
     { name: 'JavaScript' }
 ])
 
-# test
