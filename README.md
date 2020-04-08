@@ -1,11 +1,19 @@
-#FlashCard App
+**Flashcards**
+---------
+Flashcards is a Single Page Application where users can create subjects, and afterwards create flashcards that belong to those subjects.
 
-This is a simple flashcard application where users can create categories and then create flashcards that belong to those categories.
+**Motivation**
+---------
+The motivation behind this project came from wanting to have a way to study all of the programming terminology that I was having a hard time remembering. 
 
-#Get Started
+**Tech Used**
+---------
+Rails
 
-This is only the backend side of this project. The frontend can be found at https://github.com/Rsja12/flashcards_client. Clone down both this repo and the frontend repo down to your machine. Make sure to run `bundle install` and start a rails server with `rails s`. After doing both of these steps, follow along the readme for the frontend.
+**Installation**
+---------
+This is only the backend side of this project. The frontend can be found at https://github.com/Rsja12/flashcards_client. Clone down both this repo and the frontend repo to your machine. cd into `flashcards_api`. Once there, in the terminal enter the command `rails db:migrate` and then `rails db:seed`. This will seed the database with two subjects. Afterwards follow along the installation instructions on the frontend side. 
 
-#License
-
+**License**
+---------
 This project is licensed under the MIT License
